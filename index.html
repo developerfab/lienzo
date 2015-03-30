@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lienzo de dibujo</title>
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<style type="text/css">
+	canvas{
+		border: 1px solid #000;
+	}
+	</style>
+	<!--script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+</head>
+<body>
+	<div class="container text-center">
+		<canvas id="lienzo"></canvas><br>
+	</div>
+	<div class="container text-center">
+		<form class="col-md-4">
+			<input type="button" class="btn btn-danger" value="rojo" id="rojo" onclick="color_rojo();">
+			<input type="button" class="btn btn-success" value="verde" id="verde" onclick="color_verde();">
+			<input type="button" class="btn btn-info" value="azul" id="azul" onclick="color_azul();">
+			<input type="button" class="btn btn-default" value="Borrar" id="borrar_id" onclick="borrar();">
+		</form>
+		<form class="col-md-7">
+			<table>
+				<tbody>
+					<tr class="info">
+						<td >Tamaño del punto:</td>
+						<td id="tamano_punto"> </td>
+						<td><input type="button" class="btn btn btn-primary" value="+" id="aumenta" onclick="aumentar();"></td>
+						<td><input type="button" class="btn btn btn-primary" value="-" id="disminuye" onclick="disminuir();"></td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+		</form>
+		
+	</div>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
